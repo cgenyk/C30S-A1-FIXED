@@ -18,7 +18,7 @@
  import java.text.DecimalFormat;
  import java.io.*; 					// import file io libraries
 
-public class main {
+public class Main {
      // begin class
 
         public static void main(String[] args) throws IOException{  // begin main
