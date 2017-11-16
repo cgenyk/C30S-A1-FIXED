@@ -27,7 +27,7 @@ public class main {
 
             // ********** declaration of variables **********
 
-            String strin;				// string data input from keyboard
+            String strin;				// strning data input from keyboard
             String strout;				// processed info string to be output
             String bannerOut;			// string to print banner to message dialogs
 
