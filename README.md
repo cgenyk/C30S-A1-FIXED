@@ -1,6 +1,7 @@
 # C30S-A1
 
-#6 Code Grade
+### Info
+Code Grade - 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2b27365a3738479d9a75326ab87abec0)](https://www.codacy.com/app/cgenyk/C30S-A1-FIXED?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cgenyk/C30S-A1-FIXED&amp;utm_campaign=Badge_Grade)
-#6 Last Commit
+Last Commit - 
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/cgenyk/C30S-A1-FIXED)
