@@ -20,7 +20,7 @@
 
 public class main {
      // begin class
-
+// NOT IMPORTANT
         public static void main(String[] args) throws IOException{  // begin main
 
             // ********* declaration of constants **********
