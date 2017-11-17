@@ -20,7 +20,7 @@
 
 public class Main {
      // begin class
-    // TEST COMMIT
+    //FIX
         public static void main(String[] args) throws IOException{  // begin main
 
             // ********* declaration of constants **********
@@ -82,7 +82,7 @@ public class Main {
 
 
             // ************************ processing ***************************
-
+            System.out.println("this is useless");
             // ************************ print output ****************************
 
 
@@ -97,7 +97,3 @@ public class Main {
             fout.close();			// close output buffer
         }  // end main
     }  // end class
- 
-
- 
- 
