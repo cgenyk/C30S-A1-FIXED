@@ -14,8 +14,6 @@
 
     // import java libraries here as needed
  import java.util.Random;
- import javax.swing.*;
- import java.text.DecimalFormat;
  import java.io.*;
 
  import java.io.FileWriter;
@@ -32,16 +30,8 @@ public class Main {
 
             // ********** declaration of variables **********
 
-            String strin;				// string data input from keyboard
-            String strout;				// processed info string to be output
             String bannerOut;			// string to print banner to message dialogs
-
-            String prompt;				// prompt for use in input dialogs
-
-            String delim = "[ :]+";		// delimiter string for splitting input string
-            String tabSpace = "      ";	// six spaces
             Random randnum = new Random();
-
             int  num = randnum.nextInt(50) + 1;
             int randomInt = randnum.nextInt(100) + 1;
 
