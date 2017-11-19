@@ -13,10 +13,15 @@
      ***********************************************************************/
 
     // import java libraries here as needed
-
+ import java.util.Random;
  import javax.swing.*;
  import java.text.DecimalFormat;
- import java.io.*; 					// import file io libraries
+ import java.io.*;
+
+ import java.io.FileWriter;
+ import java.io.PrintWriter;
+ import java.io.IOException;
+
 
 public class Main {
      // begin class
@@ -35,14 +40,19 @@ public class Main {
 
             String delim = "[ :]+";		// delimiter string for splitting input string
             String tabSpace = "      ";	// six spaces
+            Random randnum = new Random();
 
-            // create instances of objects for i/o and formatting
+            int  num = randnum.nextInt(50) + 1;
+            int randomInt = randnum.nextInt(100) + 1;
+
+
+
 
             //ConsoleReader console = new ConsoleReader(System.in);
             //DecimalFormat df1 = new DecimalFormat("$##.00");
 
             //BufferedReader fin = new BufferedReader(new FileReader("name of file"));
-            PrintWriter fout = new PrintWriter(new BufferedWriter(new FileWriter("testOut.txt")));
+            PrintWriter fout = new PrintWriter(new BufferedWriter(new FileWriter("Numbers.txt")));
 
             // ********** Print output Banner **********
 
@@ -82,8 +92,21 @@ public class Main {
 
 
             // ************************ processing ***************************
-            System.out.println("this is useless");
-            // ************************ print output ****************************
+            Random rand = new Random();
+            for (int j=0;j < 950;j++)
+            {
+                fout.printf("%1d ",rand.nextInt(100)+1);
+                System.out.printf("%1d ",rand.nextInt(100)+1);
+                //System.out.print(rand.nextInt(100)+1);
+                System.out.println();
+
+
+            }
+
+            //log("Done.");
+
+    // ************************ print output ****************************
+
 
 
             // ******** closing message *********
@@ -96,4 +119,6 @@ public class Main {
             //fin.close();			// close input buffer
             fout.close();			// close output buffer
         }  // end main
-    }  // end class
+
+
+}  // end class
