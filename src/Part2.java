@@ -13,10 +13,16 @@
  ***********************************************************************/
 
 // import java libraries here as needed
+import java.awt.*;
 import java.util.Random;
+import java.util.*;
 import javax.swing.*;
 import java.text.DecimalFormat;
 import java.io.*;
+import java.io.File;
+import java.util.Formatter;
+import java.util.Scanner;
+
 
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -26,33 +32,35 @@ import java.io.IOException;
 public class Part2 {
     // begin class
     //FIX
-    public static void main2(String[] args) throws IOException{  // begin main
+    public static void main(String[] args) throws IOException {  // begin main
 
         // ********* declaration of constants **********
 
         // ********** declaration of variables **********
 
-        String strin;				// string data input from keyboard
-        String strout;				// processed info string to be output
-        String bannerOut;			// string to print banner to message dialogs
+        String strin;                // string data input from keyboard
+        String strout;                // processed info string to be output
+        String bannerOut;            // string to print banner to message dialogs
 
-        String prompt;				// prompt for use in input dialogs
+        String prompt;
+        Component promt = null;// prompt for use in input dialogs
 
-        String delim = "[ :]+";		// delimiter string for splitting input string
-        String tabSpace = "      ";	// six spaces
+        String delim = "[ :]+";        // delimiter string for splitting input string
+        String tabSpace = "      ";    // six spaces
         Random randnum = new Random();
 
-        int  num = randnum.nextInt(50) + 1;
+        int num = randnum.nextInt(50) + 1;
         int randomInt = randnum.nextInt(100) + 1;
 
 
-
+        int[] frequency = new int[5];
+        int count = 0;
 
         //ConsoleReader console = new ConsoleReader(System.in);
         //DecimalFormat df1 = new DecimalFormat("$##.00");
 
-        BufferedReader fin = new BufferedReader(new FileReader("src/numbers"));
-        PrintWriter fout = new PrintWriter(new BufferedWriter(new FileWriter("Numbers.txt")));
+        //BufferedReader fin = new BufferedReader(new FileReader("Numbers.txt"));
+        PrintWriter fout = new PrintWriter(new BufferedWriter(new FileWriter("NumbersData.txt")));
 
         // ********** Print output Banner **********
 
@@ -93,20 +101,34 @@ public class Part2 {
 
         // ************************ processing ***************************
 
-        // ************************ print output ****************************
+
+        String filename = ("Numbers.txt");
+        File file = new File(filename);
+        Scanner inputFile = new Scanner(file);
+        int ctr = 0;
+
+        while (inputFile.hasNextInt())
+        {
+            int tempInt = inputFile.nextInt();
+            ctr++;
+        }
+        System.out.println("The file contains this many : " + ctr);
 
 
 
-        // ******** closing message *********
+            // ************************ print output ****************************
 
-        System.out.println("end of processing.");
-        fout.format("%n%nend of processing.");
+           // System.out.println(fin);
 
-        // ***** close streams *****
+            // ******** closing message *********
 
-        //fin.close();			// close input buffer
-        fout.close();			// close output buffer
-    }  // end main
+            System.out.println("end of processing.");
+            fout.format("%n%nend of processing.");
 
+            // ***** close streams *****
 
-}  // end class
+            //fin.close();			// close input buffer
+            fout.close();            // close output buffer
+        }  // end main
+
+    }  // end class
