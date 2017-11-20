@@ -9,5 +9,8 @@ Code Grade -
 Last Commit - 
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/cgenyk/C30S-A1-FIXED)
 
+Version - 
+[![GitHub package version](https://img.shields.io/github/package-json/v/badges/shields.svg)](https://github.com/cgenyk/C30S-A1-FIXED)
+
 
 
