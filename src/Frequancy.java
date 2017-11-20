@@ -56,11 +56,12 @@ public class Frequancy {
 
         int[] frequency = new int[5];
         // int count = 0;
+        String filename = ("Numbers.txt");
 
         //ConsoleReader console = new ConsoleReader(System.in);
         //DecimalFormat df1 = new DecimalFormat("$##.00");
 
-        //BufferedReader fin = new BufferedReader(new FileReader("Numbers.txt"));
+        BufferedReader fin = new BufferedReader(new FileReader("Numbers.txt"));
         PrintWriter fout = new PrintWriter(new BufferedWriter(new FileWriter("NumbersData.txt")));
 
         // ********** Print output Banner **********
@@ -102,23 +103,32 @@ public class Frequancy {
 
         // ************************ processing ***************************
 
+            int list_size = 1000;
+            int[] list2 = new int[list_size];
+            int list_length = 0;
+            int count_size = 100;
+            int[] count = new int[count_size];
+            int count_length = 100;
+
+            fout.println(fin);
 
 
 
-        // ************************ print output ****************************
+// ************************ print output ****************************
 
-        // System.out.println(fin);
 
-        // ******** closing message *********
+            // ******** closing message *********
 
-        //System.out.println("end of processing.");
-        fout.format("%n%nend of processing.");
+            //System.out.println("end of processing.");
+            fout.format("%n%nend of processing.");
 
-        // ***** close streams *****
+            // ***** close streams *****
 
-        //fin.close();			// close input buffer
-        fout.close();            // close output buffer
-    }  // end main
+            //fin.close();			// close input buffer
+            fout.close();            // close output buffer
 
-}  // end class
+        }  // end main
+
+    }  // end class
+
 

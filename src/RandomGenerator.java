@@ -1,34 +1,34 @@
 /********************************************************************
- * Programmer:	sveinson
- * Class:  CS20S
+ * Programmer:	Connor Genyk
+ * Class:  CS30S
  *
- * Assignment: Ax Qy
- * Program Name:  name of public class
+ * Assignment: Assignment 1
+ * Program Name:  Random Generator
  *
- * Description: brief description of program
+ * Description: Generates the random number file
  *
- * Input: data to be input
+ * Input: None
  *
- * Output: results to be output
+ * Output: List of 950 - 1000 random numbers ranging from 1-100
  ***********************************************************************/
 
-// import java libraries here as needed
+// ********** Java Import Statement **********
+
 import java.util.Random;
 import java.io.*;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.io.IOException;
 
+
 public class RandomGenerator {
     // begin class
 
     public static void main(String[] args) throws IOException{  // begin main
 
-        // ********* declaration of constants **********
-        // None
         // ********** declaration of variables **********
         String bannerOut;			// string to print banner to message dialogs
-        Random randnum = new Random();
+        Random rand = new Random();
         PrintWriter fout = new PrintWriter(new BufferedWriter(new FileWriter("Numbers.txt")));
 
         // ********** Print output Banner **********
@@ -40,43 +40,34 @@ public class RandomGenerator {
         System.out.println("*******************************************");
 
         bannerOut = "*******************************************\n";
-        bannerOut += "Name:		your name here\n";
-        bannerOut += "Class:		CS20S\n";
+        bannerOut += "Name:		Connor Genyk\n";
+        bannerOut += "Class:		CS30S\n";
         bannerOut += "Assignment:	A1\n";
         bannerOut += "*******************************************\n\n";
 
         fout.println("*******************************************");
-        fout.println("Name:		your name here");
-        fout.println("Class:		CS20S");
+        fout.println("Name:		Connor Genyk");
+        fout.println("Class:		CS30S");
         fout.println("Assignment:	A1");
         fout.println("*******************************************");
 
-        // ************************ get input **********************
-        // None
-        //String[] tokens = strin.split(delim);
+        System.out.println("INFO: Run Successfully.");
+        System.out.println("------------------------");
 
 
         // ************************ processing ***************************
-        Random rand = new Random();
 
-
-
-
-        // ************************ print output ****************************
-        for (int num=0;num < 950;num++)
+         for (int num=0;num < 950;num++)
         {
             fout.printf("%1d ",rand.nextInt(100)+1);
-            System.out.printf("%1d ",rand.nextInt(100)+1);
-            System.out.println();
         }
+
         // ******** closing message *********
         System.out.println("end of processing.");
-        fout.format("%n%nend of processing.");
 
+         fout.format("%n%nend of processing.");
         // ***** close streams *****
-
         fout.close();			// close output buffer
     }  // end main
-
 
 }  // end class
