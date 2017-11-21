@@ -1,6 +1,3 @@
-jdk:
- - openjdk6
-script:
-mvn verify
-after_success:
-after_failure:
+language: java
+sudo: false
+script: mvn clean verify
