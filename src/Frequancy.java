@@ -26,13 +26,13 @@ import java.io.IOException;
 public class Frequancy {
     // begin class
 
-    public static void main(String[] args) throws IOException {  // begin main
+    public static void main(String[] args) throws IOException { // begin main
 
         // ********* declaration of constants **********
 
         // ********** declaration of variables **********
 
-        Component promt = null;// prompt for use in input dialogs
+        Component promt = null; // prompt for use in input dialogs
 
         int counter = 1;
         int curnum = 0;
@@ -55,62 +55,57 @@ public class Frequancy {
 
         // ************************ processing **************************
 
-// for-each loop for calculating heat index of May - October
+        // for-each loop for calculating heat index of May - October
 
-// create Scanner inFile1
+        // create Scanner inFile1
 
+        List < Integer > temps = new ArrayList < > ();
 
-// Original answer used LinkedList, but probably preferable to use ArrayList in most cases
-// List<String> temps = new LinkedList<String>();
-        List<Integer> temps = new ArrayList<>();
-
-// while loop
+        // while loop
         while (inFile1.hasNextInt()) {
             // find next line
-          token1 = inFile1.nextInt();
+            token1 = inFile1.nextInt();
 
-           temps.add(token1);
+            temps.add(token1);
         }
         inFile1.close();
 
-Collections.sort(temps);
+        Collections.sort(temps);
 
-prevnum = temps.get(0);
+        prevnum = temps.get(0);
 
 
-     for (int i =1; i < temps.size(); i++) {
+        for (int i = 1; i < temps.size(); i++) {
 
-         curnum = temps.get(i);
-         if (curnum == prevnum){
-             counter++;
-         } else{
-             System.out.println(prevnum+" "+ counter);
-             counter=1;
-             prevnum=curnum;
-         }
+            curnum = temps.get(i);
+            if (curnum == prevnum) {
+                counter++;
+            } else {
+                System.out.println(prevnum + " " + counter);
+                counter = 1;
+                prevnum = curnum;
+            }
 
 
 
         }
 
-         System.out.println(prevnum+" "+counter);
+        System.out.println(prevnum + " " + counter);
 
 
-// ************************ print output ****************************
+        // ************************ print output ****************************
 
 
-            // ******** closing message *********
+        // ******** closing message *********
 
-            //System.out.println("end of processing.");
+        //System.out.println("end of processing.");
 
 
-            // ***** close streams *****
+        // ***** close streams *****
 
         inFile1.close();
 
 
-    }  // end main
+    } // end main
 
-    }  // end class
-
-
+} // end class
