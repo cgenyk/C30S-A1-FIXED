@@ -20,6 +20,7 @@ import java.util.*;
 import java.io.*;
 import java.io.File;
 import java.util.Scanner;
+import java.util.Arrays;
 
 
 import java.io.FileWriter;
@@ -100,28 +101,32 @@ public class Frequancy {
         // ************************ processing **************************
         int token1 = 0;
 
-        // for-each loop for calculating heat index of May - October
+// for-each loop for calculating heat index of May - October
 
-        // create Scanner inFile1
-        Scanner inFile1 = new Scanner(new File("Numbers.txt")).useDelimiter(",\\s*");
+// create Scanner inFile1
+        Scanner inFile1 = new Scanner(new File("Numbers.txt"));
 
-        // Original answer used LinkedList, but probably preferable to use ArrayList in most cases
-        // List<String> temps = new LinkedList<String>();
+// Original answer used LinkedList, but probably preferable to use ArrayList in most cases
+// List<String> temps = new LinkedList<String>();
         List<Integer> temps = new ArrayList<>();
 
-        // while loop
-        while (inFile1.hasNext()) {
+// while loop
+        while (inFile1.hasNextInt()) {
             // find next line
-            token1 = Integer.parseInt(inFile1.next());
-            temps.add(token1);
+          token1 = inFile1.nextInt();
+
+           temps.add(token1);
         }
         inFile1.close();
 
+Collections.sort(temps);
 
+     for (int i =0; i < temps.size(); i++) {
 
-        for (int i =0; i < temps.size(); i++) {
             System.out.println(temps.get(i));
+
         }
+
 
 
 

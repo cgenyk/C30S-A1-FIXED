@@ -29,6 +29,7 @@ public class RandomGenerator {
         // ********** declaration of variables **********
         String bannerOut;			// string to print banner to message dialogs
         Random rand = new Random();
+        String delim = "[ :]+";        // delimiter string for splitting input string
         PrintWriter fout = new PrintWriter(new BufferedWriter(new FileWriter("Numbers.txt")));
 
         // ********** Print output Banner **********
@@ -48,7 +49,7 @@ public class RandomGenerator {
 
          for (int num=0;num < 950;num++)
         {
-            fout.printf("%1d ",rand.nextInt(100)+1);
+            fout.printf("%1d %n ",rand.nextInt(100)+1);
         }
 
         // ******** closing message *********
