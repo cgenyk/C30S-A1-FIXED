@@ -13,6 +13,8 @@
  ***********************************************************************/
 
 // import java libraries here as needed
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
 import java.awt.*;
 import java.util.List;
 import java.util.Random;
@@ -60,7 +62,9 @@ public class Frequancy {
 
         BufferedReader fin = new BufferedReader(new FileReader("Numbers.txt"));
         PrintWriter fout = new PrintWriter(new BufferedWriter(new FileWriter("NumbersData.txt")));
-
+        int curnum = 0;
+        int prevnum = 0;
+        int counter = 1;
         // ********** Print output Banner **********
 
         System.out.println("*******************************************");
@@ -121,13 +125,26 @@ public class Frequancy {
 
 Collections.sort(temps);
 
-     for (int i =0; i < temps.size(); i++) {
+prevnum = temps.get(0);
 
-            System.out.println(temps.get(i));
+
+     for (int i =1; i < temps.size(); i++) {
+
+         curnum = temps.get(i);
+         if (curnum == prevnum){
+             counter++;
+         }
+         else{
+             System.out.println(prevnum+" "+ counter);
+             counter=1;
+             prevnum=curnum;
+         }
+
+
 
         }
 
-
+         System.out.println(prevnum+" "+counter);
 //FIXED COPY
 
 
