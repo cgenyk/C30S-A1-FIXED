@@ -17,11 +17,8 @@ import java.awt.*;
 import java.util.List;
 import java.util.Random;
 import java.util.*;
-import javax.swing.*;
-import java.text.DecimalFormat;
 import java.io.*;
 import java.io.File;
-import java.util.Formatter;
 import java.util.Scanner;
 
 
@@ -54,7 +51,6 @@ public class Frequancy {
         int randomInt = randnum.nextInt(100) + 1;
 
 
-        int[] frequency = new int[5];
         // int count = 0;
         String filename = ("Numbers.txt");
 
@@ -101,16 +97,35 @@ public class Frequancy {
         //String[] tokens = strin.split(delim);
 
 
-        // ************************ processing ***************************
+        // ************************ processing **************************
+        int token1 = 0;
 
-            int list_size = 1000;
-            int[] list2 = new int[list_size];
-            int list_length = 0;
-            int count_size = 100;
-            int[] count = new int[count_size];
-            int count_length = 100;
+        // for-each loop for calculating heat index of May - October
 
-            fout.println(fin);
+        // create Scanner inFile1
+        Scanner inFile1 = new Scanner(new File("Numbers.txt")).useDelimiter(",\\s*");
+
+        // Original answer used LinkedList, but probably preferable to use ArrayList in most cases
+        // List<String> temps = new LinkedList<String>();
+        List<Integer> temps = new ArrayList<>();
+
+        // while loop
+        while (inFile1.hasNext()) {
+            // find next line
+            token1 = Integer.parseInt(inFile1.next());
+            temps.add(token1);
+        }
+        inFile1.close();
+
+
+
+        for (int i =0; i < temps.size(); i++) {
+            System.out.println(temps.get(i));
+        }
+
+
+
+
 
 
 

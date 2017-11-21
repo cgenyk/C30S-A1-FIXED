@@ -39,17 +39,6 @@ public class RandomGenerator {
         System.out.println("Assignment:	A1");
         System.out.println("*******************************************");
 
-        bannerOut = "*******************************************\n";
-        bannerOut += "Name:		Connor Genyk\n";
-        bannerOut += "Class:		CS30S\n";
-        bannerOut += "Assignment:	A1\n";
-        bannerOut += "*******************************************\n\n";
-
-        fout.println("*******************************************");
-        fout.println("Name:		Connor Genyk");
-        fout.println("Class:		CS30S");
-        fout.println("Assignment:	A1");
-        fout.println("*******************************************");
 
         System.out.println("INFO: Run Successfully.");
         System.out.println("------------------------");
@@ -65,7 +54,7 @@ public class RandomGenerator {
         // ******** closing message *********
         System.out.println("end of processing.");
 
-         fout.format("%n%nend of processing.");
+        // fout.format("%n%nend of processing.");
         // ***** close streams *****
         fout.close();			// close output buffer
     }  // end main
