@@ -1,0 +1,6 @@
+jdk:
+ - openjdk6
+script:
+mvn verify
+after_success:
+after_failure:
