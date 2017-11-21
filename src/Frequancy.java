@@ -96,10 +96,6 @@ prevnum = temps.get(0);
          System.out.println(prevnum+" "+counter);
 
 
-
-
-
-
 // ************************ print output ****************************
 
 
