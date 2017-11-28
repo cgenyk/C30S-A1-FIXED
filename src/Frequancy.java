@@ -38,10 +38,11 @@ public class Frequancy {
         int curnum = 0;
         int token1 = 0;
         int prevnum = 0;
+        int curnum2 = 0;
+        int prevnum2 = 0;
 
 
         Scanner inFile1 = new Scanner(new File("Numbers.txt"));
-
 
 
         // ********** Print output Banner **********
@@ -59,7 +60,7 @@ public class Frequancy {
 
         // create Scanner inFile1
 
-        List < Integer > temps = new ArrayList < > ();
+        List<Integer> temps = new ArrayList<>();
 
         // while loop
         while (inFile1.hasNextInt()) {
@@ -84,28 +85,29 @@ public class Frequancy {
                 System.out.println(prevnum + " " + counter);
                 counter = 1;
                 prevnum = curnum;
+
+
             }
-
-
-
         }
 
-        System.out.println(prevnum + " " + counter);
 
 
-        // ************************ print output ****************************
+            System.out.println(prevnum + " " + counter);
 
 
-        // ******** closing message *********
-
-        //System.out.println("end of processing.");
+            // ************************ print output ****************************
 
 
-        // ***** close streams *****
+            // ******** closing message *********
 
-        inFile1.close();
+            //System.out.println("end of processing.");
 
 
-    } // end main
+            // ***** close streams *****
 
-} // end class
+            inFile1.close();
+
+
+        } // end main
+
+    } // end class
