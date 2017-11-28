@@ -34,23 +34,22 @@ public class Frequancy {
 
         Component promt = null; // prompt for use in input dialogs
 
-        int counter = 1;
-        int curnum = 0;
-        int token1 = 0;
-        int prevnum = 0;
-        int curnum2 = 0;
-        int prevnum2 = 0;
+        int counter = 1; // Counts the frequancy
+        int curnum = 0; // Current numbber
+        int token1 = 0; // Reading the file
+        int prevnum = 0; // Last number
 
 
-        Scanner inFile1 = new Scanner(new File("Numbers.txt"));
+
+        Scanner inFile1 = new Scanner(new File("Numbers.txt")); // scans the file
 
 
         // ********** Print output Banner **********
 
         System.out.println("*******************************************");
-        System.out.println("Name:		your name here");
-        System.out.println("Class:		CS20S");
-        System.out.println("Assignment:	Ax Qy");
+        System.out.println("Name:		Connor Genyk");
+        System.out.println("Class:		CS30S");
+        System.out.println("Assignment:	A1");
         System.out.println("*******************************************");
 
 
@@ -60,7 +59,7 @@ public class Frequancy {
 
         // create Scanner inFile1
 
-        List<Integer> temps = new ArrayList<>();
+        List<Integer> temps = new ArrayList<>(); // Makes the array
 
         // while loop
         while (inFile1.hasNextInt()) {
@@ -69,20 +68,19 @@ public class Frequancy {
 
             temps.add(token1);
         }
-        inFile1.close();
+        inFile1.close(); // closes file in
 
-        Collections.sort(temps);
+        Collections.sort(temps); // sorts in order
+        prevnum = temps.get(0); // sets prevnum to 0
 
-        prevnum = temps.get(0);
 
-
-        for (int i = 1; i < temps.size(); i++) {
+        for (int i = 1; i < temps.size(); i++) { // Loop for frequancy
 
             curnum = temps.get(i);
             if (curnum == prevnum) {
-                counter++;
+                counter++; // counts
             } else {
-                System.out.println(prevnum + " " + counter);
+                System.out.println(prevnum + " " + counter); // prints out
                 counter = 1;
                 prevnum = curnum;
 
@@ -92,7 +90,7 @@ public class Frequancy {
 
 
 
-            System.out.println(prevnum + " " + counter);
+            System.out.println(prevnum + " " + counter); // prints 100
 
 
             // ************************ print output ****************************

@@ -41,37 +41,39 @@ public class RandomGenerator {
         System.out.println("*******************************************");
 
         bannerOut = "*******************************************\n";
-        bannerOut += "Name:		your name here\n";
-        bannerOut += "Class:		CS20S\n";
+        bannerOut += "Name:		Connor Genyk\n";
+        bannerOut += "Class:		CS30S\n";
         bannerOut += "Assignment:	A1\n";
         bannerOut += "*******************************************\n\n";
 
         fout.println("*******************************************");
-        fout.println("Name:		your name here");
-        fout.println("Class:		CS20S");
+        fout.println("Name:		Connor Genyk");
+        fout.println("Class:		CS30S");
         fout.println("Assignment:	A1");
         fout.println("*******************************************");
 
         // ************************ get input **********************
         // None
-        //String[] tokens = strin.split(delim);
+
 
 
         // ************************ processing ***************************
-        Random rand = new Random();
+
+
+        Random rand = new Random();  // Random number generator
 
 
 
 
         // ************************ print output ****************************
-        for (int num = 0; num < 950; num++) {
-            fout.printf("%1d ", rand.nextInt(100) + 1);
-            System.out.printf("%1d ", rand.nextInt(100) + 1);
-            System.out.println();
+        for (int num = 0; num < 950; num++) { // For loop to process random
+            fout.printf("%1d ", rand.nextInt(100) + 1); // Prints to outfile
+            System.out.printf("%1d ", rand.nextInt(100) + 1); // Prints to file
+
         }
         // ******** closing message *********
-        System.out.println("end of processing.");
-        fout.format("%n%nend of processing.");
+        System.out.println("end of processing."); // EOP Message
+        fout.format("%n%nend of processing.");    // EOP Message
 
         // ***** close streams *****
 
